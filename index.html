@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <!-- Load Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+<!-- Header -->
+<header class="fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Dike Turnip</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    
+    <!-- CSS Style -->
+    <style>
+        a {
+            font-weight: bold;
+        }
+        body {
+            padding-top: 70px;
+            /* set padding top to adjust for the height of the fixed navbar */
+        }
+    
+        .active-nav {
+            color: #fff !important;
+            /* set text color to white when active */
+        }
+    </style>
+    
+    <!-- JavaScript -->
+    <script>
+        $().ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+
+            // Add class 'active-nav' to the active link in navbar
+            $(window).scroll(function () {
+                var scrollDistance = $(window).scrollTop();
+                $('section').each(function (i) {
+                    if ($(this).position().top <= scrollDistance + 90) {
+                        $('nav a.active-nav').removeClass('active-nav');
+                        $('nav a').eq(i).addClass('active-nav');
+                    }
+                });
+            }).scroll();
+        });
+    </script>
+
+<!-- Profile section -->
+<section id="profile" class="py-8">
+    <div class="container">
+        <div class="row justify-content-center align-items-center text-center">
+            <div class="col-md-4">
+                <div class="card rounded-circle border-0 shadow-sm mb-4">
+                    <img src="./img/ini.png" class="card-img-top rounded-circle"
+                        alt="Profile Picture">
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center text-center">
+            <div class="col-md-6">
+                <h2 class="mb-0">Endike Mora Turnip</h2>
+                <div class="subheading mb-3">Mahasiswa</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CSS Style -->
+<style>
+    #profile .card {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    #profile h2 {
+        font-size: 2.5rem;
+    }
+
+    #profile .subheading {
+        font-size: 1.25rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #777;
+    }
+</style>
+
+<!-- CSS Style -->
+
+    <!-- Skills section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2>My Skills</h2>
+            <hr>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title">HTML</h4>
+                            <p class="card-text">Soon.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title">CSS</h4>
+                            <p class="card-text">Soon.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title">Bootstrap</h4>
+                            <p class="card-text">Soon.</p>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            
+                            </section>
+                            <!-- Blog section -->
+                            <section id="blog" class="bg-light py-5">
+                                <div class="container">
+                                    <h2>My Blog </h2>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="card mb-4">
+                                                <img src="img/yy.jpg" width="300px" height="232px" class="card-img-top" alt="Aku">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Ini Lah Aku</h5>
+                                                    <p class="card-text">Blog ini bercerita tentang kehidupan ku dari dulu hingga sekarang....</p>
+                                                    <a href="#" class="btn btn-primary">Soon</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card mb-4">
+                                                <img src="img/ok.jpg" class="card-img-top" alt="Praktek">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Mode Praktek</h5>
+                                                    <p class="card-text">Blog ini bercerita tentang cerita masa kuliah....</p>
+                                                    <a href="#" class="btn btn-primary">Soon</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card mb-4">
+                                                <img src="img/sip.jpg" class="card-img-top" alt="Almamater">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Mode Resmi</h5>
+                                                    <p class="card-text">Blog ini bercerita tentang cerita masa kuliah.....</p>
+                                                    <a href="#" class="btn btn-primary">Soon</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- Contact -->
+                            <section id="contact" class="py-5">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6 mx-auto">
+                                            <div class="card p-4">
+                                                <div class="card-body">
+                                                    <h3 class="text-center">Contact Me</h3>
+                                                    <hr>
+                                                    <form id="contact-form">
+                                                        <div class="form-group">
+                                                            <label for="name">Name</label>
+                                                            <input type="text" id="name" class="form-control" placeholder="Enter your name">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="email">Email</label>
+                                                            <input type="email" id="email" class="form-control" placeholder="Enter your email">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="message">Message</label>
+                                                            <textarea id="message" class="form-control" placeholder="Enter your message"></textarea>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+<div class="row mt-3">
+    <div class="col-md-6 mx-auto">
+        <div class="">
+            <h5 class="text-center">Connect with me</h5>
+            <div class="d-flex justify-content-center">
+                <a href="https://www.instagram.com/dike.turnip/" target="_blank"><img
+                        src="https://img.icons8.com/ios/512/instagram-new.png" width="30" height="30" /></a>
+                <a href="https://www.facebook.com/endike.turnip/" target="_blank"><img
+                        src="https://img.icons8.com/ios/512/facebook.png" width="30" height="30" /></a>
+                <a href="https://wa.me/6285273359345/" target="_blank"><img
+                        src="https://img.icons8.com/ios/512/whatsapp.png" width="30" height="30" /></a>
+                <a href="mailto:turnipsimantin@.com"><img src="https://img.icons8.com/ios/512/apple-mail.png" width="30"
+                        height="30" /></a>
+            </div>
+        </div>
+    </div>
+</div>
+          </div>
+                            </section>
+                            
+                            <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+                            <script type="text/javascript">
+                                (function () {
+                                    emailjs.init("-SkeXYjE8XzmCmSoc");
+                                })();
+
+                                const form = document.querySelector('#contact-form');
+                                const nameInput = document.querySelector('#name');
+                                const emailInput = document.querySelector('#email');
+                                const messageInput = document.querySelector('#message');
+
+                                form.addEventListener('submit', (event) => {
+                                    event.preventDefault();
+
+                                    emailjs.sendForm('service_f0i2e9r', 'template_2bp29gp', '#contact-form')
+                                        .then(function (response) {
+                                            console.log('SUCCESS!', response.status, response.text);
+                                        }, function (error) {
+                                            console.log('FAILED...', error);
+                                        });
+
+                                    // Clear the input fields
+                                    nameInput.value = '';
+                                    emailInput.value = '';
+                                    messageInput.value = '';
+
+                                    alert('Thank you for your message!');
+                                });
+                            </script>
+
+
+                            <!-- Load Bootstrap JS -->
+                            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+                            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+                            </body>
+                            
+                            </html>
