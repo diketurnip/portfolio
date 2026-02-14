@@ -1,236 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio</title>
-    <!-- Load Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Endike Mora Turnip - Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-<body>
-<!-- Header -->
-<header class="fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">Endike Mora Turnip</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#blog">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-
-    
-    <!-- CSS Style -->
     <style>
-        a {
-            font-weight: bold;
-        }
         body {
-            padding-top: 70px;
-            /* set padding top to adjust for the height of the fixed navbar */
+            font-family: Arial, Helvetica, sans-serif;
         }
-    
-        .active-nav {
-            color: #fff !important;
-            /* set text color to white when active */
+        .hero {
+            padding: 120px 0 80px 0;
+            background: #f8f9fa;
+        }
+        .section {
+            padding: 80px 0;
+        }
+        .title {
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        footer {
+            padding: 40px 0;
+            background: #f1f1f1;
         }
     </style>
-    
-    <!-- JavaScript -->
-    <script>
-        $().ready(function () {
-            // Add smooth scrolling to all links
-            $("a").on('click', function (event) {
-                // Make sure this.hash has a value before overriding default behavior
-                if (this.hash !== "") {
-                    // Prevent default anchor click behavior
-                    event.preventDefault();
+</head>
+<body>
 
-                    // Store hash
-                    var hash = this.hash;
-
-                    // Using jQuery's animate() method to add smooth page scroll
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, function () {
-
-                        // Add hash (#) to URL when done scrolling (default click behavior)
-                        window.location.hash = hash;
-                    });
-                } // End if
-            });
-
-            // Add class 'active-nav' to the active link in navbar
-            $(window).scroll(function () {
-                var scrollDistance = $(window).scrollTop();
-                $('section').each(function (i) {
-                    if ($(this).position().top <= scrollDistance + 90) {
-                        $('nav a.active-nav').removeClass('active-nav');
-                        $('nav a').eq(i).addClass('active-nav');
-                    }
-                });
-            }).scroll();
-        });
-    </script>
-
-<!-- Profile section -->
-<section id="profile" class="py-8">
+<!-- HERO -->
+<section class="hero text-center">
     <div class="container">
-        <div class="row justify-content-center align-items-center text-center">
+        <h6 class="text-muted">PORTFOLIO</h6>
+        <h1 class="title">Endike Mora Turnip</h1>
+        <h5 class="subtitle">IT & Administrative Support</h5>
+
+        <p class="col-md-8 mx-auto">
+            Lulusan Manajemen Informatika dengan minat pada administrasi, pengolahan data, 
+            serta dukungan operasional sistem. Terbiasa bekerja teliti, rapi, dan cepat 
+            mempelajari tools baru.
+        </p>
+
+        <a href="https://wa.me/6285273359345" class="btn btn-success mr-2">Hubungi Saya</a>
+        <a href="#" class="btn btn-outline-dark">Download CV</a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section text-center">
+    <div class="container">
+        <h2 class="title">Tentang Saya</h2>
+        <p class="col-md-8 mx-auto">
+            Saya memiliki pengalaman dalam pengelolaan data administrasi, instalasi software 
+            komputer, serta membantu operasional sistem di lingkungan sekolah. 
+            Saya terbiasa bekerja secara terstruktur dan memastikan data tercatat dengan akurat.
+        </p>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section bg-light">
+    <div class="container text-center">
+        <h2 class="title">Keahlian Utama</h2>
+        <div class="row mt-5">
+
             <div class="col-md-4">
-                <div class="card rounded-circle border-0 shadow-sm mb-4">
-                    <img src="./img/ini.png" class="card-img-top rounded-circle"
-                        alt="Profile Picture">
+                <div class="card p-4">
+                    <h5>Pengolahan Data</h5>
+                    <p>Microsoft Excel, entry data, validasi data, dan rekap laporan.</p>
                 </div>
             </div>
-        </div>
-        <div class="row justify-content-center align-items-center text-center">
-            <div class="col-md-6">
-                <h2 class="mb-0">Endike Mora Turnip</h2>
-                <div class="subheading mb-3">Mahasiswa</div>
+
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <h5>Administrasi</h5>
+                    <p>Pengarsipan dokumen, pengelolaan data, dan dokumentasi operasional.</p>
+                </div>
             </div>
+
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <h5>IT Support</h5>
+                    <p>Instalasi software, setup komputer, dan troubleshooting dasar.</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
 
-<!-- CSS Style -->
-<style>
-    #profile .card {
-        width: 200px;
-        height: 200px;
-        margin: 0 auto;
-    }
+<!-- PROJECT / EXPERIENCE -->
+<section class="section text-center">
+    <div class="container">
+        <h2 class="title">Pengalaman & Proyek</h2>
 
-    #profile h2 {
-        font-size: 2.5rem;
-    }
-
-    #profile .subheading {
-        font-size: 1.25rem;
-        font-weight: 400;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        color: #777;
-    }
-</style>
-
-<!-- CSS Style -->
-
-    <!-- Skills section -->
-    <section id="skills" class="py-5">
-        <div class="container">
-            <h2>My Skills</h2>
-            <hr>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h4 class="card-title">HTML</h4>
-                            <p class="card-text">Soon.</p>
-                        </div>
-                    </div>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="card p-4">
+                    <h5>Pengelolaan Data Siswa</h5>
+                    <p>Merekap dan memvalidasi data ratusan siswa serta memastikan data tersimpan dengan rapi dan akurat.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h4 class="card-title">CSS</h4>
-                            <p class="card-text">Soon.</p>
-                        </div>
-                    </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card p-4">
+                    <h5>Setup Laboratorium Komputer</h5>
+                    <p>Instalasi dan konfigurasi puluhan komputer untuk kebutuhan operasional dan ujian berbasis komputer.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h4 class="card-title">Bootstrap</h4>
-                            <p class="card-text">Soon.</p>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                            
-                            </section>
-                            <!-- Blog section -->
-                            <section id="blog" class="bg-light py-5">
-                                <div class="container">
-                                    <h2>My Blog </h2>
-                                    <hr>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="card mb-4">
-                                                <img src="img/yy.jpg" width="300px" height="232px" class="card-img-top" alt="Aku">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Ini Lah Aku</h5>
-                                                    <p class="card-text">Blog ini bercerita tentang kehidupan sehari-hariku....</p>
-                                                    <a href="#" class="btn btn-primary">Soon</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="card mb-4">
-                                                <img src="img/ok.jpg" class="card-img-top" alt="Praktek">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Mode Praktek</h5>
-                                                    <p class="card-text">Blog ini bercerita tentang cerita masa kuliah....</p>
-                                                    <a href="#" class="btn btn-primary">Soon</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="card mb-4">
-                                                <img src="img/sip.jpg" class="card-img-top" alt="Almamater">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Mode Resmi</h5>
-                                                    <p class="card-text">Blog ini bercerita tentang cerita masa kuliah.....</p>
-                                                    <a href="#" class="btn btn-primary">Soon</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                          
-<div class="row mt-3">
-    <div class="col-md-6 mx-auto">
-        <div class="">
-            <h5 class="text-center">Connect with me</h5>
-            <div class="d-flex justify-content-center">
-                <a href="https://www.instagram.com/dike.turnip/" target="_blank"><img
-                        src="https://img.icons8.com/ios/512/instagram-new.png" width="30" height="30" /></a>
-                <a href="https://www.facebook.com/endike.turnip/" target="_blank"><img
-                        src="https://img.icons8.com/ios/512/facebook.png" width="30" height="30" /></a>
-                <a href="https://wa.me/6285273359345/" target="_blank"><img
-                        src="https://img.icons8.com/ios/512/whatsapp.png" width="30" height="30" /></a>
-                <a href="mailto:turnipsimantin@.com"><img src="https://img.icons8.com/ios/512/apple-mail.png" width="30"
-                        height="30" /></a>
             </div>
         </div>
+
     </div>
-</div>
-          </div>
+</section>
 
+<!-- CONTACT -->
+<footer class="text-center">
+    <div class="container">
+        <h5>Kontak</h5>
+        <p>Email: turnipsimantin@.com</p>
+        <p>WhatsApp: 0852-7335-9345</p>
+    </div>
+</footer>
 
-                            <!-- Load Bootstrap JS -->
-                            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-                            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-                            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-                            </body>
-                            
-                            </html>
+</body>
+</html>
